@@ -6,8 +6,10 @@
 
         public PasswordService(IConfiguration config)
         {
-            _pepper = config["Security:Pepper"]
-                ?? throw new InvalidOperationException("Missing pepper configuration.");
+            // TODO: replace after debugging
+            //_pepper = config["Security:Pepper"]
+            //    ?? throw new InvalidOperationException("Missing pepper configuration.");
+            _pepper = "hardcoded_to_test";
         }
 
         public string HashPassword(string password)
